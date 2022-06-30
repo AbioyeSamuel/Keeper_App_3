@@ -27,6 +27,7 @@ function CreateArea(props) {
           placeholder="Title"
         />
         <textarea
+          onChange={handleClick}
           name="content"
           value={note.content}
           placeholder="Take a note..."
