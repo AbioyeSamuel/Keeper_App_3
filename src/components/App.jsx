@@ -11,6 +11,7 @@ function App() {
     setNotes((prevNotes) => {
       return [...prevNotes, newNotes];
     });
+    setNotes("");
   }
   function deleteNote(id) {
     setNotes((prevNotes) => {
