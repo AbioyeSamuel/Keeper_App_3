@@ -5,11 +5,22 @@ function CreateArea() {
     title: "",
     content: ""
   });
+  function handleClick(event) {
+    const { name, value } = event.target;
+    setNote((prevNote) => {
+      return { ...prevNote, [name]: value };
+    });
+  }
 
   return (
     <div>
       <form>
-        <input name="title" value={note.title} placeholder="Title" />
+        <input
+          onChange={handleClick}
+          name="title"
+          value={note.title}
+          placeholder="Title"
+        />
         <textarea
           name="content"
           value={note.content}
