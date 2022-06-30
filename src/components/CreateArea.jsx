@@ -11,6 +11,9 @@ function CreateArea() {
       return { ...prevNote, [name]: value };
     });
   }
+  function submit(event) {
+    event.preventDefault();
+  }
 
   return (
     <div>
@@ -27,7 +30,7 @@ function CreateArea() {
           placeholder="Take a note..."
           rows="3"
         />
-        <button>Add</button>
+        <button onClick={submit}>Add</button>
       </form>
     </div>
   );
