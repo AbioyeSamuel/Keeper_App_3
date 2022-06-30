@@ -11,7 +11,6 @@ function App() {
     setNotes((prevNotes) => {
       return [...prevNotes, newNotes];
     });
-    setNotes("");
   }
   function deleteNote(id) {
     setNotes((prevNotes) => {
@@ -35,7 +34,6 @@ function App() {
           />
         );
       })}
-      <Note key={1} title="Note title" content="Note content" />
       <Footer />
     </div>
   );
