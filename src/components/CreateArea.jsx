@@ -5,7 +5,7 @@ function CreateArea() {
     title: "",
     content: ""
   });
-  function handleClick(event) {
+  function handleClicked(event) {
     const { name, value } = event.target;
     setNote((prevNote) => {
       return { ...prevNote, [name]: value };
@@ -16,7 +16,7 @@ function CreateArea() {
     <div>
       <form>
         <input
-          onChange={handleClick}
+          onChange={handleClicked}
           name="title"
           value={note.title}
           placeholder="Title"
